@@ -1,14 +1,14 @@
 const n = 10;
 
-function evenNumbers(n, start) {
+function evenNumbers(range) {
 
-    if (n === 2) {
-        return n;
+    if (range === 2) {
+        return range;
     }
-    if (n % 2 === 0) {
-        return `${evenNumbers(n - 1)} \n` + n
+    if (range % 2 === 0) {
+        return `${evenNumbers(range - 1)} \n` + range
     }
-    return evenNumbers(n - 1)
+    return evenNumbers(range - 1)
 }
 
 console.log(evenNumbers(n))
